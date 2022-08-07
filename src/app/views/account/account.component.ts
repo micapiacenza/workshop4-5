@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'account-component',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.sass']
+  styleUrls: ['./account.component.scss']
 })
 export class AccountComponent {
   title = 'week4tut';
