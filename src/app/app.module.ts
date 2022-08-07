@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AppBarModule} from "./common/app-bar/app-bar.module";
 import {LoginModule} from "./views/login/login.module";
+import {HomeModule} from "./views/home/home.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {LoginModule} from "./views/login/login.module";
     AppRoutingModule,
     AppBarModule,
     LoginModule,
+    HomeModule,
 
   ],
   providers: [],

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppBarComponent } from './app-bar.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { AppBarComponent } from './app-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule,
   ],
   providers: [],
   exports: [
