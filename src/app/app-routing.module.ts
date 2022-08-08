@@ -5,7 +5,7 @@ import {AccountComponent} from "./views/account/account.component";
 import {HomeComponent} from "./views/home/home.component";
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'account', component: AccountComponent},
 ];
