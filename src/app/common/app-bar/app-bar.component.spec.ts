@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'week4tut'`, () => {
     const fixture = TestBed.createComponent(AppBarComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('week4tut');
+    expect(app.title).toEqual('workshop4-5');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppBarComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('week4tut app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('workshop4-5 app is running!');
   });
 });
