@@ -23,16 +23,23 @@ export class LoginComponent {
   ngOnInit() {}
 
   public userAuth() {
-    for (let i = 0; i > this.users.length; i++) {
+   let valid = false;
+    for (let i = 0; i < this.users.length; i++) {
       if (this.users[i].email === this.inputEmail && this.users[i].pwd === this.inputPdw) {
+        valid = true;
         this.router.navigate(['/account']);
-      } else {
-        alert('Error: The user entered does not match any existing user');
       }
+        break;
     }
-  }
+    if (valid === false) {
+      alert('Error: The user entered does not match any existing user');
+    }
 
-  public login() {
-   return this.userAuth();
+    // Simpler form
+    // if (this. users.some(e=>(e.email === this.inputEmail && e.pwd === this.inputPdw))){
+    //   this.router.navigate(['/account']);
+    // } else {
+    //   alert('Error: The user entered does not match any existing user');
+    // }
   }
 }
