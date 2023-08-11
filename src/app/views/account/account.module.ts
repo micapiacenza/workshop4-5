@@ -5,7 +5,7 @@ import { AccountComponent } from './account.component';
 
 @NgModule({
   declarations: [
-    AccountComponent
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
