@@ -6,7 +6,9 @@
         <div>
          <ul class="nav navbar-nav mr-auto navbar-right">
            <li><a class="nav-link d-inline p-2 text-light" routerLink="/login">Login</a></li>
-           <li *ngIf="isUserLoggedIn"><a class="nav-link d-inline p-2 text-light" routerLink="/account">Account</a></li>
+<!--           <ng-container *ngIf="isUserLoggedIn | async">-->
+            <li><a class="nav-link d-inline p-2 text-light" routerLink="/account">Account</a></li>
+<!--           </ng-container>-->
           </ul>
         </div>
       </div>

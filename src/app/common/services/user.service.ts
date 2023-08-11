@@ -6,6 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
   public isUserLoggedInSubject = new BehaviorSubject<boolean>(false);
-  
+  // Auth guards: protecting a route
   constructor() {}
 }
