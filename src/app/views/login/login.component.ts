@@ -11,9 +11,9 @@ export class LoginComponent {
  public user: User | undefined;
   // Array fo dummy data
   public users: Array<User> = [
-    {email: 'joe@email.com', pwd: 'qwerty'},
-    {email: 'sarah@email.com', pwd: 'qwerty'},
-    {email: 'tom@email.com', pwd: 'qwerty'},
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
   ];
   public inputEmail: string = '';
   public inputPdw: string = '';

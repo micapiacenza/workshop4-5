@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AccountComponent } from './account.component';
 
 @NgModule({
   declarations: [
-    AccountComponent,
+    ProfileModule
   ],
   imports: [
     BrowserModule,
   ],
   providers: [],
-  bootstrap: [AccountComponent]
+  bootstrap: [ProfileModule]
 })
-export class AccountModule { }
+export class ProfileModule { }

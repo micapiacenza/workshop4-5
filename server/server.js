@@ -34,18 +34,9 @@ app.get('/account', (req, res) => {
 // Login route with credentials array
 app.post('/api/login', (req, res) => {
   let users = [
-    {
-      'email': 'abc@com.au',
-      'pwd': '123',
-    },
-    {
-      'email': 'email@com.au',
-      'pwd': '123',
-    },
-    {
-      'email': 'mica@com.au',
-      'pwd': '123',
-    },
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
+    {email: 'joe@email.com', pwd: 'qwerty', dob: '10/10/00', age: 22, username: 'joe', valid: true},
   ];
   // not found response
   if (!req.body) {
@@ -58,20 +49,18 @@ app.post('/api/login', (req, res) => {
   customer.email = req.body.email;
   customer.upwd = req.body.upwd;
   // setting default false
-  customer.valid = false;
-
-  console.log(customer.email);
-  console.log(customer.upwd);
+  customer.valid = req.body.valid;
 
   // loop thru users array to check if customer is valid
-  for (let i = 0; i < users.length; i++) {
-    if (req.body.email === users[i].email && req.body.upwd === users[i].pwd) {
-      customer.valid = true;
+  function getAuth() {
+    for (let i = 0; i < users.length; i++) {
+      if (req.body.email === users[i].email && req.body.upwd === users[i].pwd) {
+        customer.valid = true;
+      }
     }
-    console.log(users[i].email);
-    console.log(users[i].pwd);
   }
-  console.log(customer);
+
   res.send(customer);
 });
+
 
